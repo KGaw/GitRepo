@@ -1,4 +1,5 @@
-System zarządzania listą studentów i ich ocenami umożliwia tworzenie i edycję list studentów, przypisywanie ocen, obliczanie średnich oraz generowanie raportów.
-Przepływ funkcji oparty jest na diagramie z pliku diagram_flowchart.txt, co zapewnia czytelny proces dodawania, modyfikacji i walidacji danych.
-Inspiracje z pliku inspiracje.txt wpłynęły na podział na moduły: zarządzanie użytkownikami, obsługa ocen, walidacja danych oraz eksport wyników (CSV/PDF).
-System przewiduje role (administrator, wykładowca) i proste API integracyjne, co ułatwia wdrożenie i dalsze rozszerzenia.
+System zarządzania studentami i ich ocenami umożliwia rejestrację, edycję i usuwanie danych studentów oraz przypisywanie ocen do kursów.
+Pozwala na wprowadzanie ocen, obliczanie średnich, generowanie raportów oraz przeglądanie historii ocen.
+System wspiera walidację danych, role użytkowników (administrator, wykładowca, student) oraz trwałe przechowywanie danych w bazie.
+Interfejs umożliwia wygodne wyszukiwanie, filtrowanie i eksport danych do popularnych formatów.
+Do projektu dołączony jest diagram opisujący działanie programu, ilustrujący przepływ danych i interakcje między modułami.
