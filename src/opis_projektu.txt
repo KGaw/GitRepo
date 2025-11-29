@@ -1,40 +1,4 @@
-Opis projektu systemu zarządzania studentami i ocenami
-
-Celem projektu jest stworzenie bezpiecznego, skalowalnego i łatwego w użyciu systemu do zarządzania danymi studentów, planami zajęć oraz ocenami. System ma wspierać procesy administracyjne uczelni, ułatwiać prowadzenie dokumentacji ocen, umożliwiać raportowanie oraz komunikację między wykładowcami a studentami.
-
-Zakres funkcjonalny:
-- Rejestracja i zarządzanie kontami użytkowników z rolami: administrator, wykładowca, student.
-- CRUD dla studentów, grup, przedmiotów i semestrów.
-- Wprowadzanie, modyfikacja i zatwierdzanie ocen (skala, ocena cząstkowa, poprawki).
-- Harmonogram zajęć i przypisanie wykładowców do przedmiotów.
-- Import/eksport danych (CSV, XLSX), generowanie raportów i list obecności.
-- Mechanizmy wyszukiwania i filtrowania oraz sortowania danych.
-- Historia zmian i audyt operacji na danych.
-- Powiadomienia e-mailowe i wewnętrzne powiadomienia systemowe.
-
-Wymagania niefunkcjonalne:
-- Wysoka dostępność i wydajność przy dużej liczbie użytkowników.
-- Responsywny interfejs webowy i API RESTful dla integracji z zewnętrznymi systemami.
-- Bezpieczeństwo danych: uwierzytelnianie (np. OAuth2 / JWT), autoryzacja oparta na rolach, szyfrowanie transmisji (HTTPS) i ochron a danych osobowych zgodna z RODO.
-- Walidacja danych wejściowych i ochrona przed typowymi atakami webowymi.
-- Możliwość uruchomienia w kontenerach (Docker), łatwy CI/CD i testy automatyczne.
-
-Proponowana architektura techniczna:
-- Backend: serwer API (np. Node.js, Python, Java) z warstwą logiki biznesowej i bazą relacyjną (PostgreSQL).
-- Frontend: SPA (np. React/Vue) z autoryzacją i przyjaznym interfejsem dla ról.
-- Warstwa integracji: eksport/import, powiadomienia, integracja z systemami uczelnianymi.
-- Infrastruktura: konteneryzacja, orkiestracja (opcjonalnie Kubernetes), monitoring i logowanie.
-
-Kryteria akceptacji:
-- Możliwość utworzenia konta administracyjnego oraz kont wykładowcy i studenta.
-- Pełny przepływ dodawania przedmiotu, przypisania wykładowcy, wprowadzenia ocen i wygenerowania raportu.
-- Audytowalna historia zmian dla ocen.
-- Zabezpieczenia autoryzacyjne działające zgodnie z przypisanymi rolami.
-- Eksport listy studentów i ocen do pliku CSV.
-
-Możliwości rozwoju:
-- Moduł zdalnych egzaminów i oceniania online.
-- Integracja z systemami e-learningowymi i bibliotekami open-source.
-- Analizy i wykresy wyników, prognozy ryzyka niezaliczeń przy użyciu ML.
-
-Projekt ma na celu zapewnienie narzędzia, które uprości administrację dydaktyczną, zwiększy przejrzystość oceniania i poprawi komunikację między interesariuszami.
+System zarządzania listą studentów i ich ocenami umożliwia tworzenie i edycję list studentów, przypisywanie ocen, obliczanie średnich oraz generowanie raportów.
+Przepływ funkcji oparty jest na diagramie z pliku diagram_flowchart.txt, co zapewnia czytelny proces dodawania, modyfikacji i walidacji danych.
+Inspiracje z pliku inspiracje.txt wpłynęły na podział na moduły: zarządzanie użytkownikami, obsługa ocen, walidacja danych oraz eksport wyników (CSV/PDF).
+System przewiduje role (administrator, wykładowca) i proste API integracyjne, co ułatwia wdrożenie i dalsze rozszerzenia.
