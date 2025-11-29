@@ -1,0 +1,67 @@
++-------------------------------------------------------------+
+|                     Program: Baza studentów                  |
++-------------------------------------------------------------+
+                    |
+                    v
+                [Start]
+                    |
+                    v
+        +---------------------------+
+        | Czy istnieje zapis bazy?  |
+        +---------------------------+
+         /            |            \
+       Tak           Nie          Błąd
+        |             |             \
+        v             v              v
+   [Wczytaj DB]   [Utwórz pustą DB]  [Pokaż błąd i utwórz pustą DB]
+        \             /              /
+         \           /              /
+          v         v              v
+        +-------------------------------+
+        |         Główne menu            |
+        | 1) Dodaj studenta              |
+        | 2) Dodaj ocenę                 |
+        | 3) Edytuj studenta             |
+        | 4) Usuń studenta               |
+        | 5) Wyświetl studenta / listę   |
+        | 6) Oblicz średnie / raporty    |
+        | 7) Zapisz / Eksportuj          |
+        | 8) Wczytaj / Importuj          |
+        | 9) Wyjście                     |
+        +-------------------------------+
+                    |
+                    v
+               [Wybór opcji]
+        /   /    |    \     \     \     \     \
+       1   2     3    4     5     6     7     8   9
+       |   |     |    |     |     |     |     |   |
+       v   v     v    v     v     v     v     v   v
++------+ +------+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +------+
+|Dodaj | |Dodaj | |Edyt | |Usuń | |Pokaż| |Obli- | |Zapis| |Wczy- | |Wyj- |
+|stud. | |ocenę | |uj   | |stud.| |student| |cz   | |zapis| |taj   | |ście |
++------+ +------+ +-----+ +-----+ +-----+ +-----+ +-----+ +-----+ +------+
+  |        |       |       |       |       |       |       |       |
+  v        v       v       v       v       v       v       v       v
+[Wprowadź dane]   [Weryfikuj istnienie stud.]   [Wykonaj akcję]  [Pytaj o zapis przed zamknięciem]
+  |        |       |       |       |       |       |       |
+  v        v       v       v       v       v       v       v
+[Walidacja wejścia] -> [Aktualizuj DB] -> [Potwierdzenie] -> [Powrót do menu]
+                                                              |
+                                                              v
+                                                         (opcjonalnie)
+                                                          [Zapisz DB]
+                                                              |
+                                                              v
+                                                           [Powrót]
+                                                              |
+                                                              v
+                                                           [Wyjście]
+                                                              |
+                                                              v
+                                                           [Koniec]
+
+Legenda:
+- "DB" = baza studentów (rekordy: id, imię, nazwisko, przedmioty, oceny)
+- Walidacja: sprawdź unikalność id, zakres ocen, wymagane pola
+- Oblicz średnie: per student, per przedmiot, raporty klasowe
+- Zapis/Wczyt: formaty CSV/JSON, plik lokalny lub DB
