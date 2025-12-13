@@ -15,3 +15,8 @@
 [tekst linku](https://wikipedia.com)
 obrazy
 ![opis](clippy.png)
+| Month    | Savings |
+| -------- | ------- |
+| January  | $250    |
+| February | $80     |
+| March    | $420    |
