@@ -12,3 +12,6 @@
 2. drugi
 3. trzeci
 <pre> tu idzie kod zrodlowy</pre>
+[tekst linku](https://wikipedia.com)
+obrazy
+![opis](clippy.png)
